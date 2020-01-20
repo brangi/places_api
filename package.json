@@ -2,14 +2,19 @@
   "name": "places_api",
   "version": "1.0.0",
   "description": "",
-  "main": "conf.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:nokey && npm run test:withkey",
+    "test:nokey": "NODE_ENV=test_nokey ./node_modules/mocha/bin/mocha --recursive test/nokey/tests.js",
+    "test:withkey": "NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive test/withkey/tests.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.0"
   },
   "dependencies": {
     "axios": "^0.19.1",

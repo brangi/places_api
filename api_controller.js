@@ -100,7 +100,6 @@ const findNearBy = async (lat, lng, customerName)=> {
         }
       }
     }
-    console.log(placesResult.length)
     return placesResult;
   } else {
     console.log('Not found');
@@ -110,11 +109,13 @@ const findNearBy = async (lat, lng, customerName)=> {
 
 
 module.exports = {
-  findNearBy
+  findNearBy,
+  makeParamsReq1,
+  random,
+  fixed,
+  makeParamsReq2,
+  makeRequest
 };
 
-//findNearBy(34.0522342,  -118.2436849, 'Happy Credit Union'); //Los angeles Example
-//findNearBy(34.0522342,  -118.2436849, 'Paris FCU'); //Los angeles Example
-//findNearBy(34.0522342,  -118.2436849, 'Sunrise Bank'); //Los angeles Example
 
 
