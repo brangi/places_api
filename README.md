@@ -2,7 +2,7 @@
 
 Return a number places nearby by providing latitute, longitude and a customer name
 
-### Before anyting, add correct keys from the required configuraion
+### Before anyting, add correct keys from the required configuration
 
 ```
 module.exports = {
