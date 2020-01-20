@@ -13,6 +13,7 @@ describe('Test api_controller Functions with valid key', async() => {
     expect(response1).to.have.own.property('status');
     expect(response1).to.have.own.property('results').with.lengthOf(20);
     expect(response1).to.have.own.property('next_page_token');
+    await new Promise(resolve => setTimeout(resolve, 2000));
     const response2 = await makeRequest(customer, undefined, undefined, response1.next_page_token);
     expect(response2).to.be.an('object');
     expect(response2).to.have.own.property('status');
@@ -27,6 +28,5 @@ describe('Test api_controller Functions with valid key', async() => {
     expect(response).to.be.an('array').with.lengthOf(5);
     response = await findNearBy(34.0522342,  -118.2436849, 'Sunrise Bank'); //Los angeles
     expect(response).to.be.an('array').with.lengthOf(200);
-  })
-
+  });
 });
