@@ -75,3 +75,39 @@ GET localhost:3000/places?lat=34.0522342&lng=-118.2436849&name=Happy Credit Unio
     },...
 ]
 ```
+
+
+### Running test cases
+
+```
+$ npm run test
+
+> npm run test:nokey && npm run test:withkey
+
+
+> NODE_ENV=test_nokey ./node_modules/mocha/bin/mocha --recursive test/nokey/tests.js
+
+
+
+  Test api_controller Functions
+    ✓ should return one random item from an array
+    ✓ should fix a string to lowercase and no spaces
+    ✓ should build request parameters with lat, lng, radius, language, type
+    ✓ should build request parameters with pagetoken
+
+
+  4 passing (8ms)
+
+
+> NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive test/withkey/tests.js
+
+
+
+  Test api_controller Functions with valid key
+    ✓ should make a request to google API places and return a response - (makeRequest) (1219ms)
+    ✓ should find a number of near by places required in the configuration - (findNearBy) (73412ms)
+
+
+  2 passing (1m)
+
+```
