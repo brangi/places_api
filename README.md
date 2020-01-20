@@ -82,7 +82,7 @@ GET localhost:3000/places?lat=34.0522342&lng=-118.2436849&name=Happy Credit Unio
 ```
 $ npm run test
 
-> npm run test:nokey && npm run test:withkey
+> npm run test:nokey && npm run test:withkey1 && npm run test:withkey2
 
 
 > NODE_ENV=test_nokey ./node_modules/mocha/bin/mocha --recursive test/nokey/tests.js
@@ -96,18 +96,28 @@ $ npm run test
     ✓ should build request parameters with pagetoken
 
 
-  4 passing (8ms)
+  4 passing (9ms)
 
 
-> NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive test/withkey/tests.js
+> NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive  -g '(makeRequest)' test/withkey/tests.js
 
 
 
   Test api_controller Functions with valid key
-    ✓ should make a request to google API places and return a response - (makeRequest) (1219ms)
-    ✓ should find a number of near by places required in the configuration - (findNearBy) (73412ms)
+    ✓ should make a request to google API places and return a response - (makeRequest) (969ms)
 
 
-  2 passing (1m)
+  1 passing (974ms)
+
+
+> NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive -g '(findNearBy)' test/withkey/tests.js
+
+
+
+  Test api_controller Functions with valid key
+    ✓ should find a number of near by places required in the configuration - (findNearBy) (65934ms)
+
+
+  1 passing (1m)
 
 ```
