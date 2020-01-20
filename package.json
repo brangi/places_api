@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "npm run test:nokey && npm run test:withkey",
+    "test": "npm run test:nokey && npm run test:withkey1 && npm run test:withkey2",
     "test:nokey": "NODE_ENV=test_nokey ./node_modules/mocha/bin/mocha --recursive test/nokey/tests.js",
-    "test:withkey": "NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive test/withkey/tests.js",
+    "test:withkey1": "NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive  -g '(makeRequest)' test/withkey/tests.js",
+    "test:withkey2": "NODE_ENV=test_withkey ./node_modules/mocha/bin/mocha --timeout 300000 --recursive -g '(findNearBy)' test/withkey/tests.js",
     "start": "node server.js"
   },
   "author": "",
