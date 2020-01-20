@@ -2,7 +2,7 @@ module.exports = {
   customerInfo:[
     {
       name :'Sunrise Bank',
-      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : 'AIzaSyAptoEhIrPGU6QLb9h3wi2VCiFOfENH_sM',
+      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : '',
       language :'en',
       type: 'atm',
       response :'xml',
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       name :'Happy Credit Union',
-      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : 'AIzaSyAptoEhIrPGU6QLb9h3wi2VCiFOfENH_sM',
+      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : '',
       language :'es',
       type: 'bank',
       response :'json',
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       name :'Paris FCU',
-      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : 'AIzaSyAptoEhIrPGU6QLb9h3wi2VCiFOfENH_sM',
+      api_key: process.env.NODE_ENV ==='test_nokey' ? 'test' : '',
       language :'fr',
       type: 'all',
       response :'json',
