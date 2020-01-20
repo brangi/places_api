@@ -41,12 +41,6 @@ module.exports = {
 
 ```
 
-Get dependencies
-
-```
-npm install
-```
-
 ### Install
 
 Get dependencies
