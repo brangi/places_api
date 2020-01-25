@@ -2,7 +2,7 @@
 
 Return a number places nearby by providing latitute, longitude and a customer name
 
-### Before anyting add API keys provided to the configuration file (conf.js)
+### Add API keys provided to the configuration file (conf.js)
 
 ```
 module.exports = {
